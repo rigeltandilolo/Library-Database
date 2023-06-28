@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistem Perpustakaan</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <h1>Sistem Perpustakaan</h1>
+  
+  <!-- Tambah Item -->
+  <h2>Tambah Item</h2>
+  <form id="add-form">
+    <label for="type">Jenis:</label>
+    <select id="type" name="type">
+      <option value="Buku">Buku</option>
+      <option value="Majalah">Majalah</option>
+      <option value="Jurnal">Jurnal</option>
+      <option value="CD">CD</option>
+    </select>
+    <br>
+    <label for="title">Judul:</label>
+    <input type="text" id="title" name="title">
+    <br>
+    <label for="author">Penulis:</label>
+    <input type="text" id="author" name="author">
+    <br>
+    <label for="year">Tahun:</label>
+    <input type="number" id="year" name="year">
+    <br>
+    <label for="publisher">Penerbit:</label>
+    <input type="text" id="publisher" name="publisher">
+    <br>
+    <button type="submit">Tambah</button>
+  </form>
+  
+  <!-- Daftar Item -->
+  <h2>Daftar Item</h2>
+  <table id="item-table">
+    <tr>
+      <th>ID</th>
+      <th>Jenis</th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>Tahun</th>
+      <th>Penerbit</th>
+      <th>Aksi</th>
+    </tr>
+  </table>
+  
+  <!-- Edit Item -->
+  <h2>Edit Item</h2>
+  <form id="edit-form">
+    <input type="hidden" id="edit-id" name="edit-id">
+    <label for="edit-type">Jenis:</label>
+    <select id="edit-type" name="edit-type">
+      <option value="Buku">Buku</option>
+      <option value="Majalah">Majalah</option>
+      <option value="Jurnal">Jurnal</option>
+      <option value="CD">CD</option>
+    </select>
+    <br>
+    <label for="edit-title">Judul:</label>
+    <input type="text" id="edit-title" name="edit-title">
+    <br>
+    <label for="edit-author">Penulis:</label>
+    <input type="text" id="edit-author" name="edit-author">
+    <br>
+    <label for="edit-year">Tahun:</label>
+    <input type="number" id="edit-year" name="edit-year">
+    <br>
+    <label for="edit-publisher">Penerbit:</label>
+    <input type="text" id="edit-publisher" name="edit-publisher">
+    <br>
+    <button type="submit">Simpan</button>
+    <button type="button" onclick="cancelEdit()">Batal</button>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
